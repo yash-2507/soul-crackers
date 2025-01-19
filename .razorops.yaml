@@ -11,7 +11,6 @@ global:
 
 tasks:
   setup:
-    timeout: 7200
     steps:
     - checkout
     - run: |
