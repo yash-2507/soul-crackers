@@ -2,7 +2,7 @@ version: v1.0
 name: Custom Workflow
 agent:
   machine:
-    type: e2-medium
+    type: e1-standard-2
     os_image: ubuntu_20.04
 blocks:
   - name: Install Dependencies and Run Scripts
