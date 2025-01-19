@@ -3,7 +3,7 @@ name: Custom Workflow
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu_20.04
+    os_image: ubuntu2004
 blocks:
   - name: Install Dependencies and Run Scripts
     task:
