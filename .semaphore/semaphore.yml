@@ -1,0 +1,25 @@
+version: v1.0
+name: Custom Workflow
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu_22.04
+blocks:
+  - name: Install Dependencies and Run Scripts
+    task:
+      jobs:
+        - name: Install and Run C++ and Python Scripts
+          commands:
+            - checkout
+            - run:
+                name: Update System and Install Dependencies
+                command: |
+                  sudo apt update
+                  sudo apt install g++ -y
+                  sudo apt install python3-pip -y
+                  pip3 install pyTelegramBotAPI aiohttp
+            - run:
+                name: Compile and Run C++ Code
+                command: |
+                  g++ -std=c++14 soul.cpp -o soul -pthread
+                  python3 soul.py
