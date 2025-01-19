@@ -14,4 +14,4 @@ blocks:
             - sudo apt install g++ -y
             - sudo apt install python3-pip -y
             - pip3 install pyTelegramBotAPI aiohttp
-            - python3 ../soul.py
+            - python3 soul.py
